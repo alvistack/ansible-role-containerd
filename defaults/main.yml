@@ -1,0 +1,45 @@
+---
+
+# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# systemd_cgroup enables systemd cgroups.
+containerd_plugins_cri_systemd_cgroup: true
+
+# max_container_log_line_size is the maximum log line size in bytes for a
+# container. Log line longer than the limit will be split into multiple
+# lines. -1 means no limit.
+containerd_plugins_cri_max_container_log_line_size: 16384
+
+# snapshotter is the snapshotter used by containerd.
+containerd_plugins_cri_containerd_snapshotter: "overlayfs"
+
+# Kernel modules.
+containerd_modprobe:
+  - { state: "present", option: "br_netfilter" }
+  - { state: "present", option: "overlay" }
+
+# Entries for sysctl.
+containerd_sysctl:
+  - { state: "present", name: "kernel.pid_max", value: "4194303" }
+  - { state: "present", name: "net.bridge.bridge-nf-call-arptables", value: "1" }
+  - { state: "present", name: "net.bridge.bridge-nf-call-ip6tables", value: "1" }
+  - { state: "present", name: "net.bridge.bridge-nf-call-iptables", value: "1" }
+  - { state: "present", name: "net.ipv4.ip_forward", value: "1" }
+  - { state: "present", name: "net.ipv6.conf.all.disable_ipv6", value: "1" }
+  - { state: "present", name: "net.ipv6.conf.all.forwarding", value: "0" }
+  - { state: "present", name: "net.ipv6.conf.default.disable_ipv6", value: "1" }
+  - { state: "present", name: "net.ipv6.conf.lo.disable_ipv6", value: "1" }
+  - { state: "present", name: "vm.min_free_kbytes", value: "65536" }
+  - { state: "present", name: "vm.swappiness", value: "0" }
