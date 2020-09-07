@@ -31,4 +31,5 @@ _yum_repository:
     state: "present"
 
 _yum:
+  - { state: "latest", name: "procps-ng" }
   - { state: "latest", name: "containerd.io" }
