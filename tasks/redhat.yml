@@ -56,3 +56,23 @@
   notify:
     - containerd | systemctl restart containerd.service
   tags: containerd
+
+- name: yum install procps-ng
+  yum:
+    name: "procps-ng"
+    state: "present"
+  register: result
+  until: result is succeeded
+  tags: containerd
+
+- name: tweak sysctl entries
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state }}"
+    sysctl_file: "/etc/sysctl.conf"
+    reload: false
+  loop: "{{ containerd_sysctl }}"
+  notify:
+    - containerd | sysctl --system
+  tags: containerd

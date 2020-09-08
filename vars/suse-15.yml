@@ -20,5 +20,4 @@ _zypper_repository:
     state: "present"
 
 _zypper:
-  - { state: "latest", name: "procps" }
   - { state: "latest", name: "containerd" }
