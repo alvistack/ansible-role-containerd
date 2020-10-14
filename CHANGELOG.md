@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Remove redundant tags from tasks
+
 ## 4.5.0 - 2020-08-30
 
   - Ininitial release for Ansible 2.10 or higher
