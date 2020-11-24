@@ -1,6 +1,6 @@
 # Ansible Role for Containerd
 
-[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-containerd.svg)](https://travis-ci.com/alvistack/ansible-role-containerd)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-containerd/master)](https://gitlab.com/alvistack/ansible-role-containerd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-containerd.svg)](https://github.com/alvistack/ansible-role-containerd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-containerd.svg)](https://github.com/alvistack/ansible-role-containerd/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.containerd-blue.svg)](https://galaxy.ansible.com/alvistack/containerd)
