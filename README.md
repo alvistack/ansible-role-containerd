@@ -1,5 +1,7 @@
 # Ansible Role for Containerd
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-containerd/master)](https://gitlab.com/alvistack/ansible-role-containerd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-containerd.svg)](https://github.com/alvistack/ansible-role-containerd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-containerd.svg)](https://github.com/alvistack/ansible-role-containerd/blob/master/LICENSE)
