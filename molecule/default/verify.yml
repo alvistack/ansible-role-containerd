@@ -19,6 +19,6 @@
   become: true
   tasks:
     - name: containerd --version
-      command: containerd --version
+      ansible.builtin.command: containerd --version
       register: result
       changed_when: result is not succeeded
