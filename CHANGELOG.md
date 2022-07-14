@@ -1,5 +1,9 @@
 # Ansible Role for Containerd
 
+## 6.2.0 - TBC
+
+### Major Changes
+
 ## 6.1.0 - TBC
 
 ### Major Changes
