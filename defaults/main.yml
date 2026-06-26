@@ -28,6 +28,9 @@ containerd_plugins_cri_max_container_log_line_size: 16384
 # snapshotter is the snapshotter used by containerd.
 containerd_plugins_cri_containerd_snapshotter: overlayfs
 
+# bin_dir is the directory in which the binaries for the plugin is kept.
+containerd_plugins_plugins_cri_cni_bin_dir: /opt/cni/bin
+
 # conf_dir is the directory in which the admin places a CNI conf.
 containerd_plugins_plugins_cri_cni_conf_dir: /etc/containers/networks
 

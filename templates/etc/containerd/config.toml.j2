@@ -49,7 +49,7 @@ oom_score = 0
         runtime_engine = ""
         runtime_root = ""
     [plugins.cri.cni]
-      bin_dir = "/opt/cni/bin"
+      bin_dir = "{{ containerd_plugins_plugins_cri_cni_bin_dir }}"
       conf_dir = "{{ containerd_plugins_plugins_cri_cni_conf_dir }}"
       conf_template = ""
     [plugins.cri.registry]
