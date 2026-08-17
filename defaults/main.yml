@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # sandbox_image is the image used by sandbox container.
-containerd_plugins_cri_sandbox_image: registry.k8s.io/pause:3.10.1
+containerd_plugins_cri_sandbox_image: k8s.gcr.io/pause:3.10.1
 
 # systemd_cgroup enables systemd cgroups.
 containerd_plugins_cri_systemd_cgroup: true
